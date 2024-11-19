@@ -1,0 +1,14 @@
+versions: 2
+
+models:
+  - name: customer_orders
+    description: Unique identifier for a customer
+    tests:
+      - not_null
+  - name: order_status
+    description: 1 if order is deliverd 0 otherwise
+    tests:
+      - accepted-values:
+          values: [1,0]
+  - name: state_name
+    description: The full state name of the customer
